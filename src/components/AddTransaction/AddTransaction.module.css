@@ -19,14 +19,6 @@ label{
 	flex-direction: row;
 }
 
-.incomeBtn{
-	background-color: lightgreen;
-	width: 19rem;
-	margin-top: 1.5rem;
-	margin-left: 0.2rem;
-	margin-right: 0.2rem;
-}
-
 .expenseBtn{
 	background-color: lightcoral;
 	width: 19rem;

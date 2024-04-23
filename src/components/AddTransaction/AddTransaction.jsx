@@ -22,12 +22,11 @@ export default function AddTransaction() {
 					<option value="entertainment">Entertainment</option>
 					<option value="groceries">Groceries</option>
 					<option value="shopping">Shopping</option>
-					<option value="health">Health</option>
-					<option value="salary">Salary</option>
-					<option value="other income">Other income</option>
+					<option value="health">Health</option>	
+					<option value="transportation">Transportation</option>	
+					<option value="other">Other</option>				
 				</select>
 				<div className={styles.button}>
-					<button className={styles.incomeBtn}>Add income</button>
 					<button className={styles.expenseBtn}>Add expense</button>
 				</div>
 			</form>

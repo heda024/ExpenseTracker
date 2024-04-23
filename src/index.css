@@ -21,4 +21,7 @@ button {
   transition: border-color 0.25s;
 }
 
+button:hover{
+  background-color: rgba(204, 233, 242, 0.752);
+}
 

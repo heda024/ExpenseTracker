@@ -1,6 +1,6 @@
-import Balance from './Balance'
-import History from './History'
-import AddTransaction from './AddTransaction'
+import Balance from '../Balance/Balance'
+import History from '../History/History'
+import AddTransaction from '../AddTransaction/AddTransaction'
 import styles from './ExpenseTracker.module.css'
 
 export default function ExpenseTracker() {
