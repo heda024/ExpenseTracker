@@ -12,7 +12,7 @@ export default function History() {
 				<li>Value</li>
 				<li>Date</li>
 				<li>Category</li>
-				<li>Delete</li>
+				<li></li>
 			</ul>
 			<ul className={styles.list_styling}>
 				<li>Dinner</li>
