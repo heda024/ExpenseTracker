@@ -20,6 +20,10 @@ export default function AddTransaction({onAddNewTransaction}) {
 
 			onAddNewTransaction(data);
 
+			setNameValue('');
+			setValue('');
+			setDateValue('');
+			setCategory('');
 
 	}
 
