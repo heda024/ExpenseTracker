@@ -8,16 +8,7 @@ import { useState, useEffect } from 'react'
 // Component container
 
 const transactionData = [
-	{id: uniqueId(), 
-		name:'Groceries', 
-		value: '200', 
-		date: '20.02.2024', 
-		category: 'groceries'},
-	{id: uniqueId(), 
-		name:'Books', 
-		value: '20', 
-		date: '20.02.2024', 
-		category: 'shopping'}
+	
 ]
 
 
@@ -25,31 +16,45 @@ export default function ExpenseTracker() {
 
 	const [expense, setExpense] = useState(0);
 	const [transactions, setTransactions] = useState(transactionData)
+
+	// Save to local storage
+	const saveState = () => {
+		localStorage.setItem('expenseTrackerState', 
+		JSON.stringify(transactions));
+	}
 	
+	// Calculate total expenses
 	const calculateExpenses = () => {
 		let expense = 0;
 
 		transactions.forEach((data) => {
 				expense -= data.value;
 		})
+
+		saveState()
 		setExpense(expense)
 	}
 
+	// Add new transactions
 	const handleAddNewTransaction = item => {
-		let newTransaction = [...transactions, item];
-		setTransactions(newTransaction);
+		let newTransactions = [...transactions, item];
+		setTransactions(newTransactions);
 		
 	}
 
-	// update total expenses
+	// update total expenses and retrieve from local storage
 	useEffect(() => {
-		calculateExpenses()
+		let localState = JSON.parse(localStorage.getItem('expenseTrackerState'));
+		if(localState){
+			setTransactions(localState);
+		} else{
+			calculateExpenses()
+		}
 	
 	}, [])
 
 	useEffect(() => {
 		calculateExpenses()
-	
 	}, [transactions])
 
 	// Delete transaction
