@@ -3,10 +3,12 @@ import styles from './AddTransaction.module.css'
 
 export default function AddTransaction() {
 
+	
+
 	return(
 		<>
 		<h2>Add a new transaction</h2>
-		<divc className={styles.form_container}>
+		<div className={styles.form_container}>
 			<form className={styles.form}>
 				<label htmlFor="title">Title</label>
 				<input type="text" name='title' className={styles.input}/>
@@ -19,6 +21,7 @@ export default function AddTransaction() {
 
 				<label htmlFor="title">Title</label>
 				<select name="category" className={styles.input}>
+					<option value="blank">-</option>
 					<option value="entertainment">Entertainment</option>
 					<option value="groceries">Groceries</option>
 					<option value="shopping">Shopping</option>
@@ -30,7 +33,7 @@ export default function AddTransaction() {
 					<button className={styles.expenseBtn}>Add expense</button>
 				</div>
 			</form>
-		</divc>
+		</div>
 		</>
 	)
 

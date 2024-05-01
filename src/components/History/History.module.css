@@ -5,10 +5,12 @@
 .list_styling{
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	list-style: none;
 	justify-content: center;
 	align-items: center;
+	padding: 1rem;
+	gap: 0.5rem;
 }
 
 .header_styling{
@@ -32,6 +34,10 @@ li{
 }
 
 .list_styling button{
-	flex-basis: 20%;
 	background-color: transparent;
+	border: 1px solid lightcoral;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
+
