@@ -41,6 +41,7 @@ export default function ExpenseTracker() {
 		
 	}
 
+	// update total expenses
 	useEffect(() => {
 		calculateExpenses()
 	
@@ -50,6 +51,13 @@ export default function ExpenseTracker() {
 		calculateExpenses()
 	
 	}, [transactions])
+
+	// Delete transaction
+	const handleDeleteTransaction = id => {
+		console.log(id);
+		const newTransactions = transactions.filter((item) => item.id != id);
+		setTransactions(newTransactions)
+	}
 	
 	
 
@@ -66,7 +74,8 @@ return(
 				<AddTransaction onAddNewTransaction={handleAddNewTransaction}/>
 			</div>
 			<div className={styles.container_layout}>
-				<History transactions={transactions}/>
+				<History transactions={transactions}
+				onDeleteTransaction={handleDeleteTransaction}/>
 			</div>
 		</div>
 	</div>

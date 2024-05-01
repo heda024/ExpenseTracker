@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './History.module.css'
 
-export default function History({transactions}) {
+export default function History({transactions, onDeleteTransaction}) {
 
 	return(
 		<>
@@ -22,7 +22,7 @@ export default function History({transactions}) {
 					<strong> Value: </strong> {data.value}$
 					<strong> Date: </strong>{data.date}  
 					<strong> Category: </strong>{data.category} 
-					<button> Delete</button></li>)
+					<button onClick={() => onDeleteTransaction(data.id)}> Delete</button></li>)
 				}
 				
 			</ul>

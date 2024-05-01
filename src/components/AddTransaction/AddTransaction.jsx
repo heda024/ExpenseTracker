@@ -19,6 +19,8 @@ export default function AddTransaction({onAddNewTransaction}) {
 			category: category};
 
 			onAddNewTransaction(data);
+
+
 	}
 
 
@@ -42,7 +44,7 @@ export default function AddTransaction({onAddNewTransaction}) {
 				<label htmlFor="category">Category</label>
 				<select name="category" value={category} 
 				onChange={(e) => setCategory(e.target.value)} className={styles.input}>
-					<option value="blank">-</option>
+					<option value=" - ">-</option>
 					<option value="entertainment">Entertainment</option>
 					<option value="groceries">Groceries</option>
 					<option value="shopping">Shopping</option>
