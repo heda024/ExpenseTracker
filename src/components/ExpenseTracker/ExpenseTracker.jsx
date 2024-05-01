@@ -25,23 +25,31 @@ export default function ExpenseTracker() {
 
 	const [expense, setExpense] = useState(0);
 	const [transactions, setTransactions] = useState(transactionData)
-
-	
-	
 	
 	const calculateExpenses = () => {
 		let expense = 0;
 
-		transactionData.forEach((data) => {
+		transactions.forEach((data) => {
 				expense -= data.value;
 		})
 		setExpense(expense)
+	}
+
+	const handleAddNewTransaction = item => {
+		let newTransaction = [...transactions, item];
+		setTransactions(newTransaction);
+		
 	}
 
 	useEffect(() => {
 		calculateExpenses()
 	
 	}, [])
+
+	useEffect(() => {
+		calculateExpenses()
+	
+	}, [transactions])
 	
 	
 
@@ -55,7 +63,7 @@ return(
 		</div>
 		<div className={styles.transaction_container}>
 			<div className={styles.container_layout}>
-				<AddTransaction/>
+				<AddTransaction onAddNewTransaction={handleAddNewTransaction}/>
 			</div>
 			<div className={styles.container_layout}>
 				<History transactions={transactions}/>

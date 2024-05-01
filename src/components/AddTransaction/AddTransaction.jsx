@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './AddTransaction.module.css'
 import uniqueId from '../../utils';
 
-export default function AddTransaction() {
+export default function AddTransaction({onAddNewTransaction}) {
 
 	const [nameValue, setNameValue] = useState('');
 	const [value, setValue] = useState('');
@@ -18,7 +18,7 @@ export default function AddTransaction() {
 			date: dateValue, 
 			category: category};
 
-			console.log(data);
+			onAddNewTransaction(data);
 	}
 
 
