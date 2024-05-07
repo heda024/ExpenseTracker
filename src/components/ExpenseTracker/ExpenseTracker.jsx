@@ -2,7 +2,6 @@ import Balance from '../Balance/Balance'
 import History from '../History/History'
 import AddTransaction from '../AddTransaction/AddTransaction'
 import styles from './ExpenseTracker.module.css'
-import uniqueId from '../../utils'
 import { useState, useEffect } from 'react'
 
 // Component container

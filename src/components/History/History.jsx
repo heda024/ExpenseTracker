@@ -19,7 +19,7 @@ export default function History({transactions, onDeleteTransaction}) {
 					transactions.map((data)=> 
 					<li key={data.id}> 
 					<strong> Title:</strong> {data.name} 
-					<strong> Value: </strong> {data.value}$
+					<strong> Value: </strong> {data.value}NOK
 					<strong> Date: </strong>{data.date}  
 					<strong> Category: </strong>{data.category} 
 					<button onClick={() => onDeleteTransaction(data.id)}> Delete</button></li>)

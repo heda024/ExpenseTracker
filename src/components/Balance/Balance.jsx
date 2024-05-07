@@ -7,7 +7,7 @@ export default function Balance({expense}){
 		<>
 		<div  className={styles.balanceContainer}>
 			<h2>Total expenses</h2>
-			<div className={styles.balanceFont}>{expense}$</div>
+			<div className={styles.balanceFont}>{expense}NOK</div>
 		</div>
 		</>
 	)

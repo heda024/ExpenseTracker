@@ -30,3 +30,7 @@ label{
 .input{
 	height: 2rem;
 }
+
+p{
+	color: firebrick;
+}
