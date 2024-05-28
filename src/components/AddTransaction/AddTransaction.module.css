@@ -34,3 +34,13 @@ label{
 p{
 	color: firebrick;
 }
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+	.input{
+		height: 3rem;
+	}
+}
+
+@media screen and (max-width: 599px){
+	
+}

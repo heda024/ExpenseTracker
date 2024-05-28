@@ -80,6 +80,10 @@ export default function AddTransaction({onAddNewTransaction}) {
 			clonedErrorObj.dateError = ""; 
 		}
 
+		if (!isValid) {
+			clonedErrorObj.submissionError = "Your input is not valid";
+		}
+
 		setErrors(clonedErrorObj);
 		return isValid;
 	};

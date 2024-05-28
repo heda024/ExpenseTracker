@@ -1,6 +1,6 @@
 
 .tracker_container{
-	width: 1200px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,4 +15,19 @@
 	gap: 10rem;
 	justify-content: center;
 	margin-top: 3rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+	h1{
+		font-size: 60px;
+	}
+	.transaction_container{
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 599px){
+	.transaction_container{
+		flex-direction: column;
+	}
 }
