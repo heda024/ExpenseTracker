@@ -1,8 +1,8 @@
-# React + Vite
+EXPENSE TRACKER APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an expense tracker app made using react. With this app you can add expenses through the form, which will render them in the history section and update the total balance. There is also form validation integrated in the form, and you can remove expenses from the history section by pressing the delete button. 
 
-Currently, two official plugins are available:
+I was having some issues with the form validation, so it doesnt work perfectly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Resources that helped me build this code: 
+https://www.youtube.com/watch?v=gGqpwfFoHvg
